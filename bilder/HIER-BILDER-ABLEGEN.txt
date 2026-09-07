@@ -1,0 +1,21 @@
+HIER BILDER ABLEGEN
+===================
+
+Die Karriereseite lädt Fotos & Logo automatisch aus diesem Ordner. Fehlt eine
+Datei, bleibt ein sauberer Farbverlauf stehen (kein kaputtes Bild) – die Seite
+funktioniert also auch ohne Bilder.
+
+HERO-FOTO (Querformat, mind. ~1600 px breit, Motiv/Person eher rechts):
+  hero.jpg              <- wird zuerst gesucht (auch .jpeg / .png / .webp möglich)
+  cnc-dreher.jpg        <- Alternative
+  werkstatt.jpg         <- Alternative
+
+Am besten ein echtes Werkstatt-/Maschinenfoto von Hagen & Schlegel
+(z. B. CNC-Drehmaschine, Zerspanung, Team an der Maschine). Genau solche Fotos
+wurden im Briefing mitgeschickt – einfach hier als "hero.jpg" ablegen.
+
+LOGO (optional – ersetzt den Text-Schriftzug oben, im Hero & im Footer):
+  logo.svg / logo.png            <- farbiges Logo (Kopfzeile)
+  logo-weiss.svg / logo-weiss.png  <- weißes Logo (Hero + Footer, dunkler Grund)
+
+Nichts weiter nötig: Dateien hier ablegen, committen/hochladen – fertig.
