@@ -13,7 +13,8 @@ Vollständig mobil- und conversionoptimiert, mit vorgeschaltetem Bewerber-Funnel
 
 - `index.html` – die komplette Seite (self-contained, keine Build-Schritte nötig)
 - `creatives/` – fertige META-Ad-Creatives (PNG) + editierbare Quellen in `creatives/quellen/`
-- `bilder/` – hier Hero-Foto & Logo ablegen (siehe `bilder/HIER-BILDER-ABLEGEN.txt`)
+- `bilder/` – Werkstattfotos; `hero.jpg` ist als Hero-Bild gesetzt (Logo optional, siehe `bilder/HIER-BILDER-ABLEGEN.txt`)
+- `META-ADS.md` – finale Creatives + Werbetexte + Kampagnen-Setup
 - `supabase-bewerbungen.sql` – Storage-Bucket für den optionalen Lebenslauf-Upload
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
@@ -53,9 +54,14 @@ einem neuen Supabase-Projekt einmal `supabase-bewerbungen.sql` ausführen.
 
 ## Bilder / Logo
 
-`bilder/hero.jpg` = Hero-Foto (Querformat). Fehlt es, bleibt der Farbverlauf
-stehen. Logo optional als `bilder/logo.svg` (farbig) und `bilder/logo-weiss.svg`
-(weiß). Details in `bilder/HIER-BILDER-ABLEGEN.txt`.
+`bilder/hero.jpg` ist gesetzt (echtes Werkstattfoto, zwei Kollegen an der
+Drehmaschine). Zum Tauschen einfach eine andere Querformat-Datei als
+`bilder/hero.jpg` ablegen. Logo optional als `bilder/logo.svg` (farbig) und
+`bilder/logo-weiss.svg` (weiß). Details in `bilder/HIER-BILDER-ABLEGEN.txt`.
+
+> Hinweis: In `bilder/` und im Repo-Root liegen zusätzlich die per Upload
+> hinzugefügten Original-Fotos (UUID-Dateinamen). Sie stören nicht, können bei
+> Bedarf aber aufgeräumt werden – für die Seite genügt `bilder/hero.jpg`.
 
 ## META-Ad-Creatives
 
@@ -69,13 +75,13 @@ Fertige Motive im Ordner `creatives/` (Format je Platzierung):
 | `creative-grosse-teile-4x5.png` | 1080×1350 | Feed 4:5 (A/B) | „Bock auf große Teile?" |
 | `creative-benefits-4x5.png` | 1080×1350 | Feed 4:5 (A/B) | „Unbefristet. Fair bezahlt." |
 
-Drei Hook-Varianten für A/B-Tests. Text/Farben lassen sich in
+Alle Creatives nutzen **echte Werkstattfotos** mit Marken-Farbverlauf. Drei
+Hook-Varianten für A/B-Tests. Fotos, Text & Farben lassen sich in
 `creatives/quellen/gen-creatives.js` anpassen und mit headless Chromium neu
-rendern (`node gen-creatives.js <ausgabeordner>` → PNG je HTML).
+rendern (`node gen-creatives.js <ausgabeordner> <foto-ordner>` → PNG je HTML).
 
-**Tipp für maximale Bewerberqualität:** Ein echtes Werkstatt-/Maschinenfoto von
-Hagen & Schlegel als Hintergrund performt in der Regel noch besser als eine
-reine Grafik. Die im Briefing mitgeschickten Fotos eignen sich dafür ideal.
+Die vollständigen **Werbetexte** (Primärtext/Überschrift/Beschreibung je Motiv)
+und das Kampagnen-Setup stehen in `META-ADS.md`.
 
 ## Deep-Link für die Ad
 

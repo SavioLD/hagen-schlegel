@@ -2,77 +2,45 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{width:1080px;height:1350px;overflow:hidden}
   .stage{position:relative;width:1080px;height:1350px;background:#0b2f57;
-    font-family:'Liberation Sans','DejaVu Sans',Arial,sans-serif;color:#fff;
-    -webkit-font-smoothing:antialiased}
-  .fg{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;
-    padding:84.0px}
-  .top{display:flex;align-items:center;gap:14.0px}
-  .logo{font-weight:bold;letter-spacing:1.5px;font-size:30.0px;color:#fff}
+    font-family:'Liberation Sans','DejaVu Sans',Arial,sans-serif;color:#fff;-webkit-font-smoothing:antialiased}
+  .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .ov1{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,34,58,.58) 0%,rgba(9,34,58,.28) 32%,rgba(7,26,46,.92) 100%)}
+  .ov2{position:absolute;inset:0;background:linear-gradient(102deg,rgba(9,34,58,.92) 0%,rgba(9,34,58,.55) 46%,rgba(9,34,58,.08) 100%)}
+  .accentbar{position:absolute;left:0;top:0;bottom:0;width:10.0px;background:#f28c1e}
+  .fg{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:80.0px}
+  .logo{font-weight:bold;letter-spacing:1.5px;font-size:30.0px;color:#fff;text-shadow:0 1.0px 10.0px rgba(0,0,0,.5)}
   .logo b{color:#f28c1e}
-  .logo-sub{font-size:15.0px;letter-spacing:2.0px;text-transform:uppercase;color:#a9d0ee;font-weight:bold;margin-top:4.0px}
-  .eyebrow{display:inline-flex;align-items:center;gap:12.0px;align-self:flex-start;
-    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;
-    padding:12.0px 22.0px;font-size:20.0px;font-weight:bold;letter-spacing:2.0px;
-    text-transform:uppercase;color:#cfe4f7}
-  .eyebrow .dot{width:12.0px;height:12.0px;border-radius:50%;background:#f28c1e;
-    box-shadow:0 0 0 5.0px rgba(242,140,30,.28)}
+  .logo-sub{font-size:15.0px;letter-spacing:2.0px;text-transform:uppercase;color:#bcd6f0;font-weight:bold;margin-top:4.0px}
   .mid{display:flex;flex-direction:column;gap:20.0px}
-  h1{font-size:84.0px;line-height:.98;font-weight:bold;letter-spacing:-2.0px;
-    text-shadow:0 2.0px 24.0px rgba(4,20,38,.55);-webkit-text-stroke:0.6px #fff}
+  .eyebrow{display:inline-flex;align-items:center;gap:12.0px;align-self:flex-start;background:rgba(9,34,58,.55);
+    border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:12.0px 22.0px;font-size:20.0px;font-weight:bold;
+    letter-spacing:2.0px;text-transform:uppercase;color:#e8f2fc}
+  .eyebrow .dot{width:12.0px;height:12.0px;border-radius:50%;background:#f28c1e;box-shadow:0 0 0 5.0px rgba(242,140,30,.30)}
+  h1{font-size:86.0px;line-height:.98;font-weight:bold;letter-spacing:-2.0px;
+    text-shadow:0 3.0px 26.0px rgba(3,14,28,.7);-webkit-text-stroke:0.6px #fff}
   h1 .acc{color:#f28c1e;-webkit-text-stroke:0.6px #f28c1e}
-  .sub{font-size:30.0px;line-height:1.3;font-weight:bold;color:#e2eefb;max-width:780.0px}
+  .sub{font-size:30.0px;line-height:1.3;font-weight:bold;color:#eaf3fc;max-width:800.0px;text-shadow:0 2.0px 16.0px rgba(3,14,28,.75)}
   .bullets{display:flex;flex-direction:column;gap:14.0px;margin-top:4.0px}
-  .bullets .b{display:flex;align-items:center;gap:14.0px;font-size:28.0px;font-weight:bold;color:#eaf3fc}
+  .bullets .b{display:flex;align-items:center;gap:14.0px;font-size:28.0px;font-weight:bold;color:#eaf3fc;text-shadow:0 2.0px 12.0px rgba(3,14,28,.8)}
   .bullets .b .ic{color:#f28c1e;font-size:30.0px;display:inline-flex;flex:0 0 auto}
   .chips{display:flex;flex-wrap:wrap;gap:12.0px;margin-top:6.0px}
-  .chip{display:inline-flex;align-items:center;gap:10.0px;background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.16);border-radius:12.0px;padding:14.0px 20.0px;
-    font-size:24.0px;font-weight:bold;color:#fff}
+  .chip{display:inline-flex;align-items:center;gap:10.0px;background:rgba(9,34,58,.55);border:1px solid rgba(255,255,255,.18);
+    border-radius:12.0px;padding:14.0px 20.0px;font-size:24.0px;font-weight:bold;color:#fff}
   .chip .ic{color:#f28c1e;font-size:26.0px;display:inline-flex}
-  .cta{display:inline-flex;align-items:center;justify-content:center;gap:14.0px;align-self:flex-start;
-    background:#fff;color:#0b2f57;font-weight:bold;font-size:32.0px;margin-top:10.0px;
-    padding:24.0px 44.0px;border-radius:16.0px;letter-spacing:0.3px;
-    box-shadow:0 14.0px 36.0px rgba(0,0,0,.28)}
+  .cta{display:inline-flex;align-items:center;justify-content:center;gap:14.0px;align-self:flex-start;background:#fff;
+    color:#0b2f57;font-weight:bold;font-size:32.0px;margin-top:10.0px;padding:24.0px 44.0px;
+    border-radius:16.0px;letter-spacing:0.3px;box-shadow:0 14.0px 38.0px rgba(0,0,0,.45)}
   .cta .ic{color:#0f5aa0;font-size:30.0px;display:inline-flex}
-  .foot{display:flex;align-items:center;gap:16.0px;font-size:21.0px;font-weight:bold;color:#bcd6f0}
+  .foot{display:flex;align-items:center;gap:16.0px;font-size:21.0px;font-weight:bold;color:#cfe0f2;text-shadow:0 1.0px 10.0px rgba(0,0,0,.6)}
   .foot .sep{width:6.0px;height:6.0px;border-radius:50%;background:#7fb0d6;flex:0 0 auto}
   </style></head><body>
   <div class="stage">
-    
-  <svg width="1080" height="1350" viewBox="0 0 1080 1350" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
-    <defs>
-      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#0b2f57"/>
-        <stop offset="0.5" stop-color="#0d3a66"/>
-        <stop offset="1" stop-color="#12558c"/>
-      </linearGradient>
-      <radialGradient id="glow" cx="0.8" cy="0.28" r="0.7">
-        <stop offset="0" stop-color="#1f7cc0" stop-opacity="0.55"/>
-        <stop offset="1" stop-color="#1f7cc0" stop-opacity="0"/>
-      </radialGradient>
-      <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
-        <path d="M46 0H0V46" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-      </pattern>
-    </defs>
-    <rect width="1080" height="1350" fill="url(#bg)"/>
-    <rect width="1080" height="1350" fill="url(#grid)"/>
-    <rect width="1080" height="1350" fill="url(#glow)"/>
-    <g>
-      <line x1="1254.096" y1="405" x2="1308.528" y2="405" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1250.758674642478" y1="455.91774548027325" x2="1304.725001336777" y2="463.0225471751951" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1240.8038011320605" y1="505.96427421831294" x2="1293.381075708627" y2="520.0523124813333" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1224.4017101145228" y1="554.283276231892" x2="1274.6903208281772" y2="575.1135008223887" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1201.8330459146944" y1="600.048" x2="1248.972540693489" y2="627.2639999999999" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1173.4839646342496" y1="642.4753984105859" x2="1216.667773652982" y2="675.6115005143886" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1139.8395269137475" y1="680.8395269137474" x2="1178.3287632272936" y2="719.3287632272936" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1101.475398410586" y1="714.4839646342496" x2="1134.6115005143886" y2="757.6677736529821" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1059.048" y1="742.8330459146944" x2="1086.2640000000001" y2="789.9725406934889" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1013.283276231892" y1="765.4017101145229" x2="1034.1135008223887" y2="815.6903208281772" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="964.9642742183129" y1="781.8038011320604" x2="979.0523124813333" y2="834.3810757086269" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="914.9177454802733" y1="791.7586746424779" x2="922.0225471751951" y2="845.7250013367772" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="864" y1="795.096" x2="864" y2="849.528" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="813.0822545197268" y1="791.7586746424779" x2="805.977452824805" y2="845.7250013367773" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="763.035725781687" y1="781.8038011320604" x2="748.9476875186666" y2="834.3810757086269" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="714.716723768108" y1="765.4017101145229" x2="693.8864991776114" y2="815.6903208281772" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="668.9520000000001" y1="742.8330459146944" x2="641.7360000000001" y2="789.972540693489" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="626.5246015894141" y1="714.4839646342496" x2="593.3884994856114" y2="757.6677736529821" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="588.1604730862526" y1="680.8395269137475" x2="549.6712367727064" y2="719.3287632272936" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="554.5160353657504" y1="642.475398410586" x2="511.33222634701787" y2="675.6115005143886" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="526.1669540853056" y1="600.048" x2="479.02745930651105" y2="627.2639999999999" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="503.59828988547713" y1="554.283276231892" x2="453.3096791718228" y2="575.1135008223887" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="487.1961988679397" y1="505.964274218313" x2="434.6189242913731" y2="520.0523124813335" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="477.2413253575221" y1="455.91774548027325" x2="423.27499866322285" y2="463.0225471751951" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="473.90400000000005" y1="405.00000000000006" x2="419.47200000000004" y2="405.00000000000006" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="477.2413253575221" y1="354.0822545197267" x2="423.27499866322285" y2="346.97745282480486" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="487.19619886793964" y1="304.03572578168723" x2="434.61892429137305" y2="289.94768751866684" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="503.5982898854771" y1="255.716723768108" x2="453.3096791718227" y2="234.88649917761143" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="526.1669540853056" y1="209.95199999999997" x2="479.0274593065111" y2="182.73599999999996" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="554.5160353657502" y1="167.52460158941426" x2="511.33222634701775" y2="134.3884994856116" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="588.1604730862525" y1="129.16047308625264" x2="549.6712367727064" y2="90.67123677270644" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="626.524601589414" y1="95.51603536575044" x2="593.3884994856114" y2="52.33222634701792" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="668.9519999999999" y1="67.16695408530575" x2="641.7359999999999" y2="20.02745930651116" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="714.7167237681077" y1="44.59828988547724" x2="693.8864991776111" y2="-5.690320828177164" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="763.0357257816871" y1="28.196198867939643" x2="748.9476875186667" y2="-24.381075708626895" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="813.0822545197268" y1="18.2413253575221" x2="805.9774528248049" y2="-35.725001336777154" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="863.9999999999999" y1="14.904000000000053" x2="863.9999999999999" y2="-39.52799999999996" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="914.9177454802731" y1="18.2413253575221" x2="922.022547175195" y2="-35.72500133677721" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="964.9642742183128" y1="28.196198867939643" x2="979.0523124813332" y2="-24.381075708626952" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1013.2832762318922" y1="44.598289885477186" x2="1034.1135008223887" y2="-5.690320828177164" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1059.048" y1="67.16695408530569" x2="1086.2640000000001" y2="20.027459306511105" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1101.4753984105857" y1="95.51603536575038" x2="1134.6115005143886" y2="52.332226347017865" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1139.8395269137472" y1="129.16047308625252" x2="1178.3287632272936" y2="90.67123677270638" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1173.4839646342496" y1="167.52460158941406" x2="1216.667773652982" y2="134.38849948561136" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1201.8330459146941" y1="209.95199999999986" x2="1248.9725406934888" y2="182.73599999999982" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1224.4017101145228" y1="255.71672376810773" x2="1274.6903208281772" y2="234.8864991776111" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1240.8038011320605" y1="304.0357257816871" x2="1293.381075708627" y2="289.9476875186667" stroke="rgba(255,255,255,.10)" stroke-width="6"/><line x1="1250.758674642478" y1="354.08225451972675" x2="1304.725001336777" y2="346.97745282480486" stroke="rgba(255,255,255,.10)" stroke-width="6"/>
-      <circle cx="864" cy="405" r="390.09599999999995" stroke="rgba(255,255,255,.10)" stroke-width="3"/>
-      <circle cx="864" cy="405" r="272.15999999999997" stroke="rgba(255,255,255,.09)" stroke-width="2"/>
-      <circle cx="864" cy="405" r="136.07999999999998" stroke="rgba(255,255,255,.12)" stroke-width="3"/>
-      <circle cx="864" cy="405" r="45.36" fill="rgba(255,255,255,.06)"/>
-      <!-- chuck jaws -->
-      <rect x="974.0799999999999" y="379" width="52" height="52" rx="8" transform="rotate(0 1000.0799999999999 405)" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)" stroke-width="2"/><rect x="769.96" y="496.8487369469864" width="52" height="52" rx="8" transform="rotate(120 795.96 522.8487369469864)" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)" stroke-width="2"/><rect x="769.9599999999999" y="261.1512630530136" width="52" height="52" rx="8" transform="rotate(240 795.9599999999999 287.1512630530136)" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
-    </g>
-  </svg>
+    <img class="photo" src="file:///home/user/hagen-schlegel/Drehen.JPG" alt="">
+    <div class="ov1"></div><div class="ov2"></div><div class="accentbar"></div>
     <div class="fg">
-      <div class="top">
-        <div>
-          <div class="logo">HAGEN <b>&amp;</b> SCHLEGEL</div>
-          <div class="logo-sub">Präzision aus Salem · seit 1969</div>
-        </div>
+      <div>
+        <div class="logo">HAGEN <b>&amp;</b> SCHLEGEL</div>
+        <div class="logo-sub">Präzision aus Salem · seit 1969</div>
       </div>
       <div class="mid">
         <span class="eyebrow"><span class="dot"></span>Zerspanung XXL · Bodensee</span>

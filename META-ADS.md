@@ -19,10 +19,12 @@ Empf. Tracking-URL: `…/?utm_source=meta&utm_medium=paid&utm_campaign=cnc-drehe
 | `creative-grosse-teile-4x5.png` | 1080×1350 | Feed 4:5 | B · „Bock auf große Teile?" |
 | `creative-benefits-4x5.png` | 1080×1350 | Feed 4:5 | C · „Unbefristet. Fair bezahlt." |
 
-> Hinweis: Meta hat die 20-%-Text-Regel abgeschafft – die Text-Overlays sind
-> zulässig. Für Story/Reels sind Kern-Inhalte in der sicheren Zone (oben/unten
-> je ~14 % frei für UI). **Tipp:** Ein echtes Werkstatt-/Maschinenfoto als
-> Hintergrund hebt die Performance i. d. R. noch einmal an.
+> Alle Creatives nutzen **echte Werkstattfotos von Hagen & Schlegel** mit
+> Marken-Farbverlauf für Textlesbarkeit. Meta hat die 20-%-Text-Regel
+> abgeschafft – die Overlays sind zulässig. Für Story/Reels liegen die
+> Kern-Inhalte in der sicheren Zone (oben/unten je ~14 % frei für UI).
+> Andere Fotos lassen sich in `creatives/quellen/gen-creatives.js` eintragen
+> und neu rendern.
 
 ---
 
