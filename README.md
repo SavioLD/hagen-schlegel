@@ -48,9 +48,11 @@ hinterlegt – Bewerbungen landen direkt in dieser Tabelle:
 - tableID: `6a8ec5a92e3577f5c52e6d53`
 - Endpoint: `https://api-v2.lead-table.com/api/webhook/generic/<TOKEN>`
 
-Übergebene Felder: `vorname, nachname, name, email, telefon, stelle, erfahrung,
+Übergebene Felder: `vorname, nachname, email, telefon, stelle, erfahrung,
 programmierung, zeichnungen, qualifikation_score, lebenslauf, datenschutz,
-quelle, seite`.
+quelle, seite`. (Der Anzeigename wird in Leadtable aus `vorname` + `nachname`
+gebildet – ein separates `name`-Feld wird bewusst NICHT gesendet, sonst
+erscheint der Name doppelt.)
 
 > Sollte der Token je erneuert werden, einfach die `WEBHOOK_URL` in `index.html`
 > ersetzen (im Portal unter Tabelle → Einstellungen/Integrationen → Webhook).

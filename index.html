@@ -833,7 +833,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
 
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
-    return { vorname:val("vorname"), nachname:val("nachname"), name:(val("vorname")+" "+val("nachname")).trim(), email:val("email"), telefon:val("telefon"),
+    return { vorname:val("vorname"), nachname:val("nachname"), email:val("email"), telefon:val("telefon"),
              stelle:STELLE, erfahrung:val("erfahrung"), programmierung:val("programmierung"), zeichnungen:val("zeichnungen"), qualifikation_score:qualScore()+" / "+QUAL_MAX, lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage Hagen & Schlegel", seite:location.href };
   }
