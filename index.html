@@ -455,7 +455,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
     <span class="kicker">So läuft's ab</span>
     <h2 class="sec-title">In drei Schritten in unsere Werkstatt.</h2>
     <div class="steps">
-      <div class="step reveal"><b>Kurz bewerben</b><p>Zwei kurze Fragen zu deiner Qualifikation beantworten, Kontaktdaten hinterlassen. Lebenslauf optional.</p></div>
+      <div class="step reveal"><b>Kurz bewerben</b><p>Ein paar kurze Fragen zu deiner Qualifikation beantworten, Kontaktdaten hinterlassen. Lebenslauf optional.</p></div>
       <div class="step reveal"><b>Wir melden uns persönlich</b><p>Du bekommst schnell eine Rückmeldung, und wir klären erste Fragen kurz und unkompliziert am Telefon.</p></div>
       <div class="step reveal"><b>Kennenlernen vor Ort</b><p>Du schaust dir Betrieb, Maschinen und Team an – und wenn's passt, machen wir dir ein Angebot.</p></div>
     </div>
@@ -493,7 +493,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
     <div class="form-card">
       <div class="form-card__head">
         <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
-        <div class="progress__label"><span id="stepLabel">Schritt 1 von 3</span><span>~60 Sek.</span></div>
+        <div class="progress__label"><span id="stepLabel">Schritt 1 von 4</span><span>~60 Sek.</span></div>
       </div>
 
       <form class="form-card__body" id="applyForm" novalidate>
@@ -505,10 +505,10 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
           <p class="hint">Bei Hagen &amp; Schlegel arbeiten Menschen, die ihr Handwerk verstehen. Sei einfach ehrlich.</p>
           <p class="q">Welche Qualifikation bringst du im Bereich Drehen/Zerspanung mit?<span class="req">*</span></p>
           <div class="choice-grid" data-field="erfahrung">
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung (Zerspanung/Drehtechnik) + mehrjährige Berufserfahrung" /><span class="key">A</span><span>Ausbildung im Bereich Zerspanung/Drehen <small>+ mehrjährige Berufserfahrung</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Abgeschlossene Ausbildung (Zerspanung/Drehtechnik)" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Bereich Zerspanung/Drehen</span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Mehrjährige Berufserfahrung an CNC-Drehmaschinen (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Erfahrung an CNC-Drehmaschinen <small>ohne passende Ausbildung</small></span></label>
-            <label class="choice"><input type="radio" name="erfahrung" value="Keine Ausbildung und keine Erfahrung im Bereich" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung im Bereich</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="3" value="Abgeschlossene Ausbildung (Zerspanung/Drehtechnik) + mehrjährige Berufserfahrung" /><span class="key">A</span><span>Ausbildung im Bereich Zerspanung/Drehen <small>+ mehrjährige Berufserfahrung</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="2" value="Abgeschlossene Ausbildung (Zerspanung/Drehtechnik)" /><span class="key">B</span><span>Abgeschlossene Ausbildung im Bereich Zerspanung/Drehen</span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="2" value="Mehrjährige Berufserfahrung an CNC-Drehmaschinen (ohne passende Ausbildung)" /><span class="key">C</span><span>Mehrjährige Erfahrung an CNC-Drehmaschinen <small>ohne passende Ausbildung</small></span></label>
+            <label class="choice"><input type="radio" name="erfahrung" data-score="0" value="Keine Ausbildung und keine Erfahrung im Bereich" /><span class="key">D</span><span>Weder Ausbildung noch Erfahrung im Bereich</span></label>
           </div>
         </div>
 
@@ -518,14 +518,26 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
           <p class="hint">Für diese Stelle ist das Programmieren an der Maschine ein wichtiger Baustein.</p>
           <p class="q">Wie sicher bist du im Programmieren von CNC-Drehmaschinen?<span class="req">*</span></p>
           <div class="choice-grid" data-field="programmierung">
-            <label class="choice"><input type="radio" name="programmierung" value="Sehr sicher – ich programmiere eigenständig an der Steuerung" /><span class="key">A</span><span>Sehr sicher <small>ich programmiere eigenständig an der Steuerung</small></span></label>
-            <label class="choice"><input type="radio" name="programmierung" value="Grundkenntnisse – ich programmiere einfache Programme" /><span class="key">B</span><span>Grundkenntnisse <small>einfache Programme &amp; Anpassungen</small></span></label>
-            <label class="choice"><input type="radio" name="programmierung" value="Noch keine – aber ich lerne es schnell" /><span class="key">C</span><span>Noch keine <small>aber ich möchte es lernen</small></span></label>
+            <label class="choice"><input type="radio" name="programmierung" data-score="2" value="Sehr sicher – ich programmiere eigenständig an der Steuerung" /><span class="key">A</span><span>Sehr sicher <small>ich programmiere eigenständig an der Steuerung</small></span></label>
+            <label class="choice"><input type="radio" name="programmierung" data-score="1" value="Grundkenntnisse – ich programmiere einfache Programme" /><span class="key">B</span><span>Grundkenntnisse <small>einfache Programme &amp; Anpassungen</small></span></label>
+            <label class="choice"><input type="radio" name="programmierung" data-score="0" value="Noch keine – aber ich lerne es schnell" /><span class="key">C</span><span>Noch keine <small>aber ich möchte es lernen</small></span></label>
           </div>
         </div>
 
-        <!-- STEP 3 – Kontaktdaten -->
+        <!-- STEP 3 – Technische Zeichnungen (Vorfilterung) -->
         <div class="fstep" data-step="3">
+          <h3>Technische Zeichnungen</h3>
+          <p class="hint">Als Dreher arbeitest du täglich nach Zeichnung – deshalb fragen wir kurz nach.</p>
+          <p class="q">Wie sicher liest du technische Zeichnungen?<span class="req">*</span></p>
+          <div class="choice-grid" data-field="zeichnungen">
+            <label class="choice"><input type="radio" name="zeichnungen" data-score="2" value="Sicher – ich lese technische Zeichnungen selbstständig" /><span class="key">A</span><span>Sicher <small>ich lese Zeichnungen selbstständig</small></span></label>
+            <label class="choice"><input type="radio" name="zeichnungen" data-score="1" value="Grundkenntnisse – die wichtigsten Angaben verstehe ich" /><span class="key">B</span><span>Grundkenntnisse <small>die wichtigsten Angaben verstehe ich</small></span></label>
+            <label class="choice"><input type="radio" name="zeichnungen" data-score="0" value="Noch nicht – das würde ich erst lernen" /><span class="key">C</span><span>Noch nicht <small>das würde ich erst lernen</small></span></label>
+          </div>
+        </div>
+
+        <!-- STEP 4 – Kontaktdaten -->
+        <div class="fstep" data-step="4">
           <h3>Du hast es fast geschafft</h3>
           <p class="hint">Hinterlasse kurz deine Kontaktdaten. Wir melden uns persönlich bei dir.</p>
           <div class="frow">
@@ -657,8 +669,27 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
   var UPLOAD_BUCKET = "bewerbungen";
   var UPLOAD_MAX    = 10 * 1024 * 1024;
   var UPLOAD_TYPES  = ["application/pdf","image/jpeg","image/png","image/webp","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document"];
-  var SCREEN_OUT    = ["Keine Ausbildung und keine Erfahrung im Bereich"];
   var STELLE        = "CNC-Dreher mit Programmierkenntnissen (m/w/d)";
+
+  /* --- Vorfilterung per Punktesystem -------------------------------------
+     Jede der 3 Qualifizierungsfragen (erfahrung, programmierung, zeichnungen)
+     vergibt Punkte über das data-score-Attribut der gewählten Antwort.
+     Max. erreichbar = 7. Liegt die Summe <= REJECT_MAX, gilt die Bewerbung
+     als "alles maximal schlecht" und wird freundlich abgelehnt.
+     Zum Schärfen/Lockern einfach REJECT_MAX anpassen (0 = nur die absolut
+     schlechteste Kombination wird abgelehnt).                               */
+  var QUAL_FIELDS = ["erfahrung", "programmierung", "zeichnungen"];
+  var QUAL_MAX    = 7;
+  var REJECT_MAX  = 1;
+  function qualScore(){
+    var total = 0;
+    QUAL_FIELDS.forEach(function(n){
+      var c = form.querySelector('input[name="'+n+'"]:checked');
+      if (c) total += parseInt(c.getAttribute("data-score") || "0", 10);
+    });
+    return total;
+  }
+  var LAST_QUAL_STEP = QUAL_FIELDS.length; // = 3 (danach kommt der Kontakt-Schritt)
 
   var form=document.getElementById("applyForm"), steps=Array.prototype.slice.call(form.querySelectorAll(".fstep")), TOTAL=steps.length;
   var bar=document.getElementById("progressBar"), label=document.getElementById("stepLabel");
@@ -708,10 +739,10 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
     btnNext.disabled=!stepValid(current);
     errBox.classList.remove("is-visible");
   }
-  function isScreenedOut(){ return SCREEN_OUT.indexOf(selectedValue("erfahrung"))!==-1; }
+  function isScreenedOut(){ return qualScore() <= REJECT_MAX; }
   function next(){
     if (locked || !stepValid(current) || submitting) return;
-    if (current===1 && isScreenedOut()){ showScreenout(); return; }
+    if (current===LAST_QUAL_STEP && isScreenedOut()){ showScreenout(); return; }
     if (current===TOTAL){ submit(); return; }
     current++; render();
     var card=document.querySelector(".form-card");
@@ -803,7 +834,7 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d6e8f9}
   function collect(){
     function val(name){ var c=form.querySelector('input[name="'+name+'"]:checked'); if(c) return c.value; var inp=form.querySelector('input[name="'+name+'"]:not([type="radio"])'); return inp?inp.value.trim():""; }
     return { vorname:val("vorname"), nachname:val("nachname"), name:(val("vorname")+" "+val("nachname")).trim(), email:val("email"), telefon:val("telefon"),
-             stelle:STELLE, erfahrung:val("erfahrung"), programmierung:val("programmierung"), lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
+             stelle:STELLE, erfahrung:val("erfahrung"), programmierung:val("programmierung"), zeichnungen:val("zeichnungen"), qualifikation_score:qualScore()+" / "+QUAL_MAX, lebenslauf:"", datenschutz:"Ja (Einwilligung mit Absenden, Art. 6 Abs. 1 lit. a DSGVO)",
              quelle:"Karriere-Landingpage Hagen & Schlegel", seite:location.href };
   }
   function submit(){

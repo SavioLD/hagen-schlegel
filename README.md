@@ -18,14 +18,23 @@ Vollständig mobil- und conversionoptimiert, mit vorgeschaltetem Bewerber-Funnel
 - `supabase-bewerbungen.sql` – Storage-Bucket für den optionalen Lebenslauf-Upload
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
-## Der Funnel (3 Schritte)
+## Der Funnel (4 Schritte, 3 Qualifizierungsfragen)
 
-1. **Qualifikation / Vorfilterung** – Erfahrung im Bereich Drehen/Zerspanung.
-   Wer „weder Ausbildung noch Erfahrung" wählt, wird freundlich aussortiert
-   (kein Lead an Leadtable).
-2. **Programmierkenntnisse** – Schlüsselqualifikation der Stelle wird abgefragt
-   (sehr sicher / Grundkenntnisse / noch keine). Erhöht die Bewerberqualität.
-3. **Kontaktdaten** – Vor-/Nachname, Telefon, E-Mail; Lebenslauf optional.
+1. **Erfahrung** im Bereich Drehen/Zerspanung
+2. **Programmierkenntnisse** an CNC-Steuerungen
+3. **Technische Zeichnungen** – wie sicher werden sie gelesen
+4. **Kontaktdaten** – Vor-/Nachname, Telefon, E-Mail; Lebenslauf optional
+
+**Punkte-Vorfilterung:** Jede der drei Fragen vergibt Punkte (über das
+`data-score`-Attribut der Antworten, max. **7**). Liegt die Summe **≤ `REJECT_MAX`**
+(Standard **1**), wird die Bewerbung als „alles maximal schlecht" gewertet und
+**freundlich abgelehnt** (kein Lead an Leadtable) – ausgelöst nach Frage 3, vor
+dem Kontaktschritt. Wer echte Erfahrung oder eine Ausbildung mitbringt, kommt
+immer durch. Schwelle in `index.html` über `REJECT_MAX` justierbar
+(`0` = nur die absolut schlechteste Kombination wird abgelehnt).
+
+An Leadtable gehen zusätzlich `zeichnungen` und `qualifikation_score` (z. B.
+„5 / 7") mit, damit die Bewerberqualität sofort sichtbar ist.
 
 Ein Seiten-Neuladen startet den Funnel frisch (kein dauerhaftes Sperren).
 
@@ -40,7 +49,8 @@ hinterlegt – Bewerbungen landen direkt in dieser Tabelle:
 - Endpoint: `https://api-v2.lead-table.com/api/webhook/generic/<TOKEN>`
 
 Übergebene Felder: `vorname, nachname, name, email, telefon, stelle, erfahrung,
-programmierung, lebenslauf, datenschutz, quelle, seite`.
+programmierung, zeichnungen, qualifikation_score, lebenslauf, datenschutz,
+quelle, seite`.
 
 > Sollte der Token je erneuert werden, einfach die `WEBHOOK_URL` in `index.html`
 > ersetzen (im Portal unter Tabelle → Einstellungen/Integrationen → Webhook).
